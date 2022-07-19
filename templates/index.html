@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Работы</h1>
+{% for item in jobs%}
+<div class="col-md6 border rounded">
+    <h2>{{item.team_leader}}</h2>
+    <div>
+        {{item.job}}
+    </div>
+    <div>
+        Дата начала - {{item.start_date}}, Дата конца - {{item.end_date}}
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
